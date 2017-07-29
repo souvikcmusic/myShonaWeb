@@ -59,11 +59,5 @@ var app = angular
              	   //window.location="file:///Users/souvikchakraborty/git/myShonaWeb/home.html";
                 }
              };
-             $scope.isLoggedIn=function isLoggedIn(){
-             	if($scope.getSession!=undefined && $scope.getSession!=null && $scope.getSession!=""){
-             		return true;
-             	}
-             	return false;
-             }
 
         });
