@@ -3,13 +3,12 @@
 
 <head>
 	<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<<<<<<< HEAD
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	    <link rel="stylesheet" href="css/souvik-creative.css" type="text/css">
-	    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/souvik-creative.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 	<title>Sanchaita</title>
 	<meta name="description" content="Sanchaita">
 	<!-- Latest compiled and minified CSS -->
@@ -299,7 +298,7 @@
                 <section class="row pad-top"  id="moment-three-row">
                     <div class="col-sm-10">
                         <h3></span>Mahabaleshwar</h3>
-                        <p class="p-justify">Now the trrip to Mahabaleshwar was quite a fun journey. We wnet to the temple, had lunch at a small hotel and then visited so many view points. The best part of this expedition was the happiness and smile on your face. Also i shall never forget your encounter with the monkeys..ha ha ha.. :D.</p>
+                        <p class="p-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mauris tortor, eleifend sit amet fringilla ac, tincidunt id massa. Proin et odio mattis, venenatis lacus vel, faucibus elit</p>
                     </div>
                     <div class="col-sm-2 no-padding" style="width:195px;">
                         <div class="carousel slide" id="moment-three-carousel" data-ride="carousel">
@@ -340,7 +339,7 @@
                 <section class="row pad-top" id="moment-four-row">
                     <div class="col-sm-10">
                         <h3></span>Pune</h3>
-                        <p class="p-justify">Now what more can I say about my experience with you in Pune. I was feeling like the happiest person on earth when you came to spend time with me on my birthday. We went to so many places to eat, starting from Copa Cabana, Olive Bistro, Dalchini, KFC, Barbeque Nation, Paasha and many more. Thank you for the wonderful time and the bestest birthday gift.</p>
+                        <p class="p-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mauris tortor, eleifend sit amet fringilla ac, tincidunt id massa. Proin et odio mattis, venenatis lacus vel, faucibus elit</p>
                     </div>
                     <div class="col-sm-2 no-padding" style="width:195px;">
                         <div class="carousel slide" id="moment-four-carousel" data-ride="carousel">
@@ -531,48 +530,24 @@
       
 
     </footer>
-=======
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/souvik-creative.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <script src="js/angular.js"></script>
-    <script src="js/script.js"></script>
-	<title>Login</title>
-	<meta name="description" content="Login">
-	<!-- Latest compiled and minified CSS -->
-</head>
-<body ng-app="myModule">
-	<!-- Main Container | START -->
-    <div class="container" ng-controller="myController">
-    	<div class="row">
-    		<div class="col-md-8 col-md-offset-2">
-    			<div class="well">
-    				<form>
-    					
-    					<div class="form-group">
-    						<span class="icon-profile-female middle" style="font-size: 40px;"></span>
-    					</div>
-    					<div class="form-group">
-    						<input type="text" placeholder="UserName" ng-model="username" id="txtUserName" class="form-control">
-    					</div>
-    					<div class="form-group">
-    						<input type="password" placeholder="Password" ng-model="password" id="txtPassword" class="form-control">
-    					</div>
-    					<div class="form-group">
-    						<button class="btn btn-primary middle-button" ng-click="myFunc()">Sign In</button>
-    					</div>
-    				</form>
-    			</div>
-    		</div>
-    	</div>
-    </div>
-    <!-- Main Container | END -->
->>>>>>> master
     
-    <!-- Latest compiled and minified JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var mainbottom = $('#my-navbar').offset().top + $('#my-navbar').height();
+        $(window).on('scroll',function(){
+            var stop = Math.round($(window).scrollTop())-40;
 
+            if (stop > mainbottom) {
+                $('.navbar').addClass('affix');
+            } else {
+                $('.navbar').removeClass('affix');
+            }
+
+        });
+        
+    </script>
 
 </body>	
 </html>
