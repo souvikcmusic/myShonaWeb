@@ -26,17 +26,7 @@ var app = angular
                     gender: 3, salary: 60000
                 }
             ];
-            $scope.myFunc = function() {
-            	
-               if($scope.username==username && $scope.password==password){
-            	   
-            	   
-            	   $scope.setSession("loggedin","yes",1);
-            	   alert($scope.getSession("loggedin"));
-            	   window.location = "https://souvikcmusic.github.io/myShonaWeb/home.html";
-            	   //window.location="file:///Users/souvikchakraborty/git/myShonaWeb/home.html";
-               }
-            };
+            
             $scope.setSession=function setCookie(cname, cvalue, exdays) {
                 var d = new Date();
                 d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -58,5 +48,22 @@ var app = angular
                 }
                 return "";
             }
+            $scope.myFunc = function() {
+            	
+                if($scope.username==username && $scope.password==password){
+             	   
+             	   
+             	   $scope.setSession("loggedin","yes",1);
+             	   alert($scope.getSession("loggedin"));
+             	   window.location = "https://souvikcmusic.github.io/myShonaWeb/home.html";
+             	   //window.location="file:///Users/souvikchakraborty/git/myShonaWeb/home.html";
+                }
+             };
+             $scope.isLoggedIn=function isLoggedIn(){
+             	if($scope.getSession!=undefined && $scope.getSession!=null && $scope.getSession!=""){
+             		return true;
+             	}
+             	return false;
+             }
 
         });
