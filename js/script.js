@@ -5,6 +5,7 @@ var app = angular
         .controller("myController",function ($scope,$location) {
         	var username="jhum";
         	var password="jhum@941";
+        	$scope.type="password";
             var credentials = [
                 {
                     username: "jhum", password:"jhum@941"
@@ -26,6 +27,13 @@ var app = angular
                     gender: 3, salary: 60000
                 }
             ];
+            
+            $scope.togglePass=function hideMyPass(){
+            	$scope.type=="text"? $scope.type="password":$scope.type="text";
+            };
+            $scope.showHidePassword=function showHidePassword(){
+            	return $scope.type=="text"? true:false;
+            };
             
             $scope.setSession=function setCookie(cname, cvalue, exdays) {
                 var d = new Date();
@@ -54,10 +62,13 @@ var app = angular
              	   
              	   
              	   $scope.setSession("loggedin","yes",1);
-             	   alert($scope.getSession("loggedin"));
              	   window.location = "https://souvikcmusic.github.io/myShonaWeb/home.html";
              	   //window.location="file:///Users/souvikchakraborty/git/myShonaWeb/home.html";
                 }
              };
+             $scope.logout=function logout(){
+            	 document.cookie = "loggedin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            	 window.location = "https://souvikcmusic.github.io/myShonaWeb/index.html";
+             }
 
         });
