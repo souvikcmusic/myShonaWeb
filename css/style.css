@@ -66,3 +66,11 @@ form{
 }
 
 
+.hide-show{
+  width: 94%;
+  margin: -1.7em 21% 0 90.5%;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+}
+
