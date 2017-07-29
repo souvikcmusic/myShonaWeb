@@ -65,6 +65,19 @@ var app = angular
              	   window.location = "https://souvikcmusic.github.io/myShonaWeb/home.html";
              	   //window.location="file:///Users/souvikchakraborty/git/myShonaWeb/home.html";
                 }
+                else if($scope.username==username && $scope.password!=password){
+                	alert("Invalid Password");
+                	$scope.password="";
+                }
+                else if($scope.username!=username && $scope.password==password){
+                	alert("Invalid Username");
+                	$scope.username="";
+                }
+                else{
+                	alert("Invalid User");
+                	$scope.username="";
+                	$scope.password="";
+                }
              };
              $scope.logout=function logout(){
             	 document.cookie = "loggedin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
