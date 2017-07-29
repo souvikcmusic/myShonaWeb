@@ -1,42 +1,51 @@
-<!-- All the files that are required -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Varela+Round'  type='text/css'>
- <link rel="stylesheet" href="css/login.css" type="text/css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Where all the magic happens -->
-<!-- LOGIN FORM -->
-<div class="text-center" style="padding:50px 0">
-	<div class="logo">login</div>
-	<!-- Main Form -->
-	<div class="login-form-1">
-		<form id="login-form" class="text-left">
-			<div class="login-form-main-message"></div>
-			<div class="main-login-form">
-				<div class="login-group">
-					<div class="form-group">
-						<label for="lg_username" class="sr-only">Username</label>
-						<input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
-					</div>
-					<div class="form-group">
-						<label for="lg_password" class="sr-only">Password</label>
-						<input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
-					</div>
-					<div class="form-group login-group-checkbox">
-						<input type="checkbox" id="lg_remember" name="lg_remember">
-						<label for="lg_remember">remember</label>
-					</div>
-				</div>
-				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
-			</div>
-			<div class="etc-login-form">
-				<p>forgot your password? <a href="#">click here</a></p>
-				<p>new user? <a href="#">create new account</a></p>
-			</div>
-		</form>
-	</div>
-	<!-- end:Main Form -->
-</div>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-</div> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/souvik-creative.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/angular.js"></script>
+    <script src="js/script.js"></script>
+	<title>Login</title>
+	<meta name="description" content="Login">
+	<!-- Latest compiled and minified CSS -->
+</head>
+<body ng-app="myModule">
+	<!-- Main Container | START -->
+    <div class="container" ng-controller="myController">
+    	<div class="row">
+    		<div class="col-md-8 col-md-offset-2">
+    			<div class="well">
+    				<form>
+    					
+    					<div class="form-group">
+    						<span class="icon-profile-female middle" style="font-size: 40px;"></span>
+    					</div>
+    					<div class="form-group">
+    						<input type="text" placeholder="UserName" ng-model="username" id="txtUserName" class="form-control">
+    					</div>
+    					<div class="form-group">
+    						<input type="password" placeholder="Password" ng-model="password" id="txtPassword" class="form-control">
+    					</div>
+    					<div class="form-group">
+    						<button class="btn btn-primary middle-button" ng-click="myFunc()">Sign In</button>
+    					</div>
+    				</form>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <!-- Main Container | END -->
+    
+    <!-- Latest compiled and minified JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+</body>	
+</html>

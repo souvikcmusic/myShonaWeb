@@ -48,4 +48,21 @@
 .icon-youtube2:before {
     content: "\e903";
 }
+form{
+	width:300px;
+	margin:auto;
+	
+}
+.middle{
+	width:inherit;
+    margin-left: 40%;
+}
+.middle-button{
+	margin-left: 35%;
+}
+.well{
+	margin:auto;
+	margin-top:20px;
+}
+
 
