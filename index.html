@@ -16,23 +16,23 @@
 	<meta name="description" content="Login">
 	<!-- Latest compiled and minified CSS -->
 </head>
-<body style="background-color: black !important;" data-spy="slide" ng-app="myModule">
+<body style="background-color: black !important;" data-spy="slide"  data-target="#my-navbar" >
 	<!-- Main Container | START -->
 	<nav class="navbar navbar-default navbar-fixed-top affix" id="my-navbar">
         <div class="container-fluid">
             <div class="navbar-header">
                 
-                <a href="" class="navbar-brand"><span class="icon-profile-female" style="font-size: 25px;"></span></a>
+                <a href="#" class="navbar-brand"><span class="icon-profile-female" style="font-size: 25px;"></span></a>
                 
             </div><!--Navbar Header-->
             
         </div><!--Container End-->
     </nav><!--Navbar End-->
-    <div class="container" ng-controller="myController">
+    <div class="container" ng-app="myModule">
     	<div class="row">
     		<div class="col-md-8 col-md-offset-2">
     			<div class="well">
-    				<form>
+    				<form  ng-controller="myController">
     					
     					<div class="form-group">
     						<span class="icon-profile-female middle" style="font-size: 40px;"></span>
@@ -55,11 +55,11 @@
     			</div>
     		</div>
     	</div>
-    </div>
     <!-- Main Container | END -->
-    <br><br>
+    </div>
     <footer id="page-footer">
-        <div class="container">
+        <br><br>
+         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Stay Connected!</h2>
