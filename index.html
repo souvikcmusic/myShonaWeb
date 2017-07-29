@@ -1,553 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- All the files that are required -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Where all the magic happens -->
+<!-- LOGIN FORM -->
+<div class="text-center" style="padding:50px 0">
+	<div class="logo">login</div>
+	<!-- Main Form -->
+	<div class="login-form-1">
+		<form id="login-form" class="text-left">
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="lg_username" class="sr-only">Username</label>
+						<input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+					</div>
+					<div class="form-group">
+						<label for="lg_password" class="sr-only">Password</label>
+						<input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
+					</div>
+					<div class="form-group login-group-checkbox">
+						<input type="checkbox" id="lg_remember" name="lg_remember">
+						<label for="lg_remember">remember</label>
+					</div>
+				</div>
+				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+			</div>
+			<div class="etc-login-form">
+				<p>forgot your password? <a href="#">click here</a></p>
+				<p>new user? <a href="#">create new account</a></p>
+			</div>
+		</form>
+	</div>
+	<!-- end:Main Form -->
+</div>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/souvik-creative.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-	<title>Sanchaita</title>
-	<meta name="description" content="Sanchaita">
-	<!-- Latest compiled and minified CSS -->
-</head>
-    <style>
-        #wishes-fluid-container{
-            background-color: #f05f40;
-            
-        }
-        #moments-fluid-container{
-            background-color: lightgray;
-        }
-        
-        .page-header h2{
-           color: white;
-            
-        }
-        .page-header h2 small{
-            color:oldlace;
-        }
-        blockquote p{
-            color: oldlace;
-            font-family:monospace;
-        }
-        blockquote footer{
-            color:bisque;
-        }
-        #page-footer{
-             background-color:#000;
-            padding:40px;
-        }
-        #page-footer a{
-            color:whitesmoke;
-        }
-        #page-footer{
-            color:whitesmoke;
-        }
-        #moments h2{
-           color: black;
-            
-        }
-        #moments h2 small{
-            color:gray;
-        }
-        .p-justify{
-            text-align: justify;
-        }
-        hr.small{
-            width:30px;
-        }
-        .col-sm-2.no-padding{
-            padding-left: 20px;
-        }
-    </style>
-<body data-spy="slide" data-target="#my-navbar">
-<!-- Navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top" id="my-navbar">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="" class="navbar-brand"><span class="icon-profile-female" style="font-size: 25px;"></span></a>
-                
-            </div><!--Navbar Header-->
-            <div class="collapse navbar-collapse" id="navbar-collapse">
-  				<ul class="nav navbar-nav navbar-right">
-                    <li><a href="#wishes">Wishes</a></li>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Moments <span class="caret"></span></a> 
-                        <ul class="dropdown-menu">
-                            <li><a href="#moment-one-row">Wax Museum</a></li> 
-                            <li><a href="#moment-two-row">New Delhi</a></li>
-                            <li><a href="#moment-three-row">Mahabaleshwar</a></li> 
-                            <li><a href="#moment-four-row">Pune</a></li> 
-                        </ul>
-                    </li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#page-footer">Connect</a></li>
-  				</ul>
-                
-            </div><!--Navbar Menu Collapse-->
-        </div><!--Container End-->
-    </nav><!--Navbar End-->
-    
-    <div class="carousel slide" data-interval="5000" id="header-carousel" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#header-carousel" data-slide-to="1"></li>
-            <li data-target="#header-carousel" data-slide-to="2"></li>
-            <li data-target="#header-carousel" data-slide-to="3"></li>
-            <li data-target="#header-carousel" data-slide-to="4"></li>
-            <li data-target="#header-carousel" data-slide-to="5"></li>
-            <li data-target="#header-carousel" data-slide-to="6"></li>
-            <li data-target="#header-carousel" data-slide-to="7"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="item active">
-                <img src="header-img4.JPG" alt="Text of the image">
-                <div class="carousel-caption">
-                    <h3>Delhi</h3>
-                    <p>Lodi Gardens</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="header-img1.JPG" alt="Text of the image">
-                <div class="carousel-caption">
-                    <h3>Mumbai</h3>
-                    <p>Chowpatty Beach</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="header-img2.JPG" alt="Text of the image">
-                <div class="carousel-caption">
-                    <h3>Delhi</h3>
-                    <p>Raj Ghat</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="header-img3.JPG" alt="Text of the image">
-                <div class="carousel-caption">
-                    <h3>Delhi</h3>
-                    <p>Lodi Gardens</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="header-img5.jpg" alt="Text of the image">
-                <div class="carousel-caption">
-                    <h3>Delhi</h3>
-                    <p>Lodi Gardens</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="header-img6.JPG" alt="Text of the image">
-                <div class="carousel-caption">
-                    <h3>Pune</h3>
-                    <p>Stone &amp; Water Grill</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="header-img7.jpg" alt="Text of the image">
-                <div class="carousel-caption">
-                    <h3>Pune</h3>
-                    <p>Stone &amp; Water Grill</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="header-img8.jpg" alt="Text of the image">
-                <div class="carousel-caption">
-                    <h3>Lonavla</h3>
-                    <p>Rajmachi Park, Khandala</p>
-                </div>
-            </div>
-        </div><!-- End Carousel inner -->
-        <a href="#header-carousel" class="left carousel-control" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a href="#header-carousel" class="right carousel-control" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
-    </div><!-- End Carousel -->
-   
-    <!-- Wishes-->
-    <div class="container-fluid" id="wishes-fluid-container">
-  	<div class="container" id="pos">
-  		<section>
-  			<div class="page-header" id="wishes">
-  				<h2>HAPPY BIRTHDAY!!.<small> Here is some people wishing you</small></h2>
-  			</div>
+<!-- REGISTRATION FORM -->
+<!-- <div class="text-center" style="padding:50px 0">
+	<div class="logo">register</div>
+	<!-- Main Form -->
+	<div class="login-form-1">
+		<form id="register-form" class="text-left">
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="reg_username" class="sr-only">Email address</label>
+						<input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="username">
+					</div>
+					<div class="form-group">
+						<label for="reg_password" class="sr-only">Password</label>
+						<input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password">
+					</div>
+					<div class="form-group">
+						<label for="reg_password_confirm" class="sr-only">Password Confirm</label>
+						<input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirm password">
+					</div>
+					
+					<div class="form-group">
+						<label for="reg_email" class="sr-only">Email</label>
+						<input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">
+					</div>
+					<div class="form-group">
+						<label for="reg_fullname" class="sr-only">Full Name</label>
+						<input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="full name">
+					</div>
+					
+					<div class="form-group login-group-checkbox">
+						<input type="radio" class="" name="reg_gender" id="male" placeholder="username">
+						<label for="male">male</label>
+						
+						<input type="radio" class="" name="reg_gender" id="female" placeholder="username">
+						<label for="female">female</label>
+					</div>
+					
+					<div class="form-group login-group-checkbox">
+						<input type="checkbox" class="" id="reg_agree" name="reg_agree">
+						<label for="reg_agree">i agree with <a href="#">terms</a></label>
+					</div>
+				</div>
+				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+			</div>
+			<div class="etc-login-form">
+				<p>already have an account? <a href="#">login here</a></p>
+			</div>
+		</form>
+	</div>
+	<!-- end:Main Form -->
+</div>
 
-  			<div class="row">
-  				<div class="col-md-4">
-  					<blockquote>
-  						<p class="p-justify" >Birthdays come around every year, but friends like you only come once in a lifetime. I’m so glad you came into my life. Best wishes on your special day</p>
-  						<footer>Souvik</footer>
-  					</blockquote>
-  				</div>
-  				<div class="col-md-4">
-                    <blockquote>
-  					<div align="center"  class="embed-responsive embed-responsive-16by9">
-                        
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/_z-1fTlSDF0" frameborder="0" allowfullscreen></iframe>
-                            Your Browser does not support HTML5 video
-                       
-                    </div>
-                    </blockquote>
-  				</div>
-  				<div class="col-md-4">
-  					<blockquote>
-  						<p class="p-justify" >Like every year, we pray for our only daughter on her birthday and wish her a lifetime of happiness and peace. Our blessings are always with you.</p>
-  						<footer>Maa &amp; Pops </footer>
-  					</blockquote>
-  				</div>
-  			</div><!-- End row -->
-  		</section>
-  	</div><!--End Wishes Container-->
-    </div><!--End Wishes fluid Container -->
-    <div class="container-fluid" id="moments-fluid-container">
-            <div class="container">
-            <section>
-                <div class="page-header" id="moments">
-                    <h2>Moments.<small> Some of the loviest moments spent with you</small></h2>
-                </div><!-- End Page Header -->
-
-                <section class="row pad-top"  id="moment-one-row">
-                    <div class="col-sm-10">
-                        <h3>Celebrity Wax Museum</h3>
-                        <p class="p-justify">This was quite an awesome day spent with you. Remember how you got us late and cab driver was just about to leave us? We went to Lonavla that day.
-                            While returning back from Lonavla we visited this place located beside Pune-Mumbai Expressway. I cannot forget the smile and excitement on your face when we were browsing through the wax models in this museum. It was a lovely experience.
-                        </p>
-                    </div>
-                    <div class="col-sm-2 no-padding" style="width:195px;">
-                        <div class="carousel slide" id="moment-one-carousel" data-ride="carousel">
-                          <ol class="carousel-indicators">
-                             <li data-target="#moment-one-carousel" data-slide-to="0" class="active"></li>
-                             <li data-target="#moment-one-carousel" data-slide-to="1"></li>
-                             <li data-target="#moment-one-carousel" data-slide-to="2"></li>
-                             <li data-target="#moment-one-carousel" data-slide-to="3"></li>
-                          </ol>
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img src="museum/Museum1.jpg" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="museum/Museum2.jpg" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="museum/Museum3.jpg" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="museum/Museum4.jpg" alt="Text of the image">
-                                </div>
-                           </div><!-- End Carousel inner -->
-                        <a href="#moment-one-carousel" class="left carousel-control" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                        </a>
-                        <a href="#moment-one-carousel" class="right carousel-control" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>
-                        </div>
-                    </div>
-                </section><!-- End moment-one-row -->
-                <hr>
-                <section class="row pad-top" id="moment-two-row">
-                    <div class="col-sm-10">
-                        <h3>New Delhi</h3>
-                        <p class="p-justify">I still remember our little auto rides, photoshoot at Humayun's Tomb(BTW its tooomb not taumb :P) and much more. The day started with me meeting you at Rajeev Chowk Metro station and then we went to visit India Gate. Starting from eating variety of food, roaming around in auto and metros, getting to know that you prefer butterscotch over chocolate, eating apke haath ka Rasmalai..... everything was so much fun. I shall always cherish this short and happy trip to Delhi. Thank you. </p>
-                    </div>
-                    <div class="col-sm-2 no-padding" style="width:195px;">
-                        <div class="carousel slide" id="moment-two-carousel" data-ride="carousel">
-                          <ol class="carousel-indicators">
-                             <li data-target="#moment-two-carousel" data-slide-to="0" class="active"></li>
-                             <li data-target="#moment-two-carousel" data-slide-to="1"></li>
-                             <li data-target="#moment-two-carousel" data-slide-to="2"></li>
-                             <li data-target="#moment-two-carousel" data-slide-to="3"></li>
-                             <li data-target="#moment-two-carousel" data-slide-to="4"></li>
-                          </ol>
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img src="Delhi/Delhi1.jpg" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="Delhi/Delhi2.jpg" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="Delhi/Delhi3.jpg" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="Delhi/Delhi4.jpg" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="Delhi/Delhi5.jpg" alt="Text of the image">
-                                </div>
-                           </div><!-- End Carousel inner -->
-                        <a href="#moment-two-carousel" class="left carousel-control" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                        </a>
-                        <a href="#moment-two-carousel" class="right carousel-control" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>
-                        </div>
-                    </div>
-                </section><!-- End moment-two-row -->
-                <hr>
-                <section class="row pad-top"  id="moment-three-row">
-                    <div class="col-sm-10">
-                        <h3></span>Mahabaleshwar</h3>
-                        <p class="p-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mauris tortor, eleifend sit amet fringilla ac, tincidunt id massa. Proin et odio mattis, venenatis lacus vel, faucibus elit</p>
-                    </div>
-                    <div class="col-sm-2 no-padding" style="width:195px;">
-                        <div class="carousel slide" id="moment-three-carousel" data-ride="carousel">
-                          <ol class="carousel-indicators">
-                             <li data-target="#moment-three-carousel" data-slide-to="0" class="active"></li>
-                             <li data-target="#moment-three-carousel" data-slide-to="1"></li>
-                             <li data-target="#moment-three-carousel" data-slide-to="2"></li>
-                             <li data-target="#moment-three-carousel" data-slide-to="3"></li>
-                             <li data-target="#moment-three-carousel" data-slide-to="4"></li>
-                          </ol>
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img src="mahabaleshwar/Mahablsr1.jpg" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="mahabaleshwar/Mahablsr2.jpg" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="mahabaleshwar/Mahablsr3.jpg" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="mahabaleshwar/Mahablsr4.jpg" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="mahabaleshwar/Mahablsr5.jpg" alt="Text of the image">
-                                </div>
-                           </div><!-- End Carousel inner -->
-                        <a href="#moment-three-carousel" class="left carousel-control" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                        </a>
-                        <a href="#moment-three-carousel" class="right carousel-control" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>
-                        </div>
-                    </div>
-                </section><!-- End moment-three-row-->
-                <hr>
-                <section class="row pad-top" id="moment-four-row">
-                    <div class="col-sm-10">
-                        <h3></span>Pune</h3>
-                        <p class="p-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mauris tortor, eleifend sit amet fringilla ac, tincidunt id massa. Proin et odio mattis, venenatis lacus vel, faucibus elit</p>
-                    </div>
-                    <div class="col-sm-2 no-padding" style="width:195px;">
-                        <div class="carousel slide" id="moment-four-carousel" data-ride="carousel">
-                          <ol class="carousel-indicators">
-                             <li data-target="#moment-four-carousel" data-slide-to="0" class="active"></li>
-                             <li data-target="#moment-four-carousel" data-slide-to="1"></li>
-                             <li data-target="#moment-four-carousel" data-slide-to="2"></li>
-                             <li data-target="#moment-four-carousel" data-slide-to="3"></li>
-                             <li data-target="#moment-four-carousel" data-slide-to="4"></li>
-                             <li data-target="#moment-four-carousel" data-slide-to="5"></li>
-                             <li data-target="#moment-four-carousel" data-slide-to="6"></li>
-                             <li data-target="#moment-four-carousel" data-slide-to="7"></li>
-                          </ol>
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img src="pune/pune1.JPG" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="pune/pune2.JPG" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="pune/pune3.JPG" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="pune/pune4.JPG" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="pune/pune5.JPG" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="pune/pune6.JPG" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="pune/pune7.JPG" alt="Text of the image">
-                                </div>
-                                <div class="item">
-                                    <img src="pune/pune8.JPG" alt="Text of the image">
-                                </div>
-                           </div><!-- End Carousel inner -->
-                        <a href="#moment-four-carousel" class="left carousel-control" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                        </a>
-                        <a href="#moment-four-carousel" class="right carousel-control" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>
-                        </div>
-                    </div>
-                </section><!-- End moment-four-row-->
-                <hr>
-            </section>
-        </div><!-- End Container -->
-    </div><!-- End moments fluid Container-->
-    <section class="no-padding" id="portfolio">
-        <div class="container-fluid">
-            <div class="row no-gutter">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="portfolio-box">
-                        <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Dinner
-                                </div>
-                                <div class="project-name">
-                                    Copa Cabana, Pune
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- Portfolio Box end-->
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="portfolio-box">
-                        <img src="img/portfolio/2.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Birthday
-                                </div>
-                                <div class="project-name">
-                                    Barbeque Nation, Koregaon Park
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- Portfolio Box end-->
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="portfolio-box">
-                        <img src="img/portfolio/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Birthday Gift
-                                </div>
-                                <div class="project-name">
-                                    Fossil Wrist Watch
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- Portfolio Box end-->
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="portfolio-box">
-                        <img src="img/portfolio/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Gift
-                                </div>
-                                <div class="project-name">
-                                    The Guitar Man Pen Stand &amp; Parker Pen
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- Portfolio Box end-->
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="portfolio-box">
-                        <img src="img/portfolio/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Visit to Delhi
-                                </div>
-                                <div class="project-name">
-                                    Humayun's Tomb
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- Portfolio Box end-->
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="portfolio-box">
-                        <img src="img/portfolio/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Dinner
-                                </div>
-                                <div class="project-name">
-                                    Copa Cabana, Pune
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- Portfolio Box end-->
-                </div>
-            </div>
-        </div>
-    </section><!--Portfolio Section End-->
-
-    <!-- Footer -->
-    
-        
-    
-    </div><!--End Contact Fluid Container-->
-    <footer id="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Stay Connected!</h2>
-                    <hr class="small">
-                    
-                </div>
-                <div class="col-lg-2 col-lg-offset-2 text-center">
-                    <i class="glyphicon glyphicon-phone"></i>
-                    <p><a href="tel:09730137857">09730137857</a></p>
-                </div>
-                <div class="col-lg-2 text-center">
-                    <i class="icon-facebook2"></i>
-                    <p><a href="https://www.facebook.com/souvikch1">Facebook</a></p>
-                </div>
-                <div class="col-lg-2 text-center">
-                    <i class="glyphicon glyphicon-envelope"></i>
-                    <p><a href="mailto:souvikgenius1@gmail.com">souvikgenius1@gmail.com</a></p>
-                </div>
-                
-                <div class="col-lg-2 text-center">
-                    <i class="icon-twitter"></i>
-                    <p><a href="http://www.twitter.com/souvikcmusic">Twitter</a></p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="container text-center">
-            <br><br>
-            <br>
-<a href="#" class="btn btn-primary btn-xl page-scroll"><span class="glyphicon glyphicon-chevron-up"></span></a>
-      </div><!-- end Container-->
-      
-
-    </footer>
-    
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        var mainbottom = $('#my-navbar').offset().top + $('#my-navbar').height();
-        $(window).on('scroll',function(){
-            var stop = Math.round($(window).scrollTop())-40;
-
-            if (stop > mainbottom) {
-                $('.navbar').addClass('affix');
-            } else {
-                $('.navbar').removeClass('affix');
-            }
-
-        });
-        
-    </script>
-
-</body>	
-</html>
+<!-- FORGOT PASSWORD FORM -->
+<div class="text-center" style="padding:50px 0">
+	<div class="logo">forgot password</div>
+	<!-- Main Form -->
+	<div class="login-form-1">
+		<form id="forgot-password-form" class="text-left">
+			<div class="etc-login-form">
+				<p>When you fill in your registered email address, you will be sent instructions on how to reset your password.</p>
+			</div>
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="fp_email" class="sr-only">Email address</label>
+						<input type="text" class="form-control" id="fp_email" name="fp_email" placeholder="email address">
+					</div>
+				</div>
+				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+			</div>
+			<div class="etc-login-form">
+				<p>already have an account? <a href="#">login here</a></p>
+				<p>new user? <a href="#">create new account</a></p>
+			</div>
+		</form>
+	</div>
+	<!-- end:Main Form -->
+</div> -->
