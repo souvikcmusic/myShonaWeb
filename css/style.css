@@ -73,4 +73,8 @@ form{
   z-index: 5;
   cursor: pointer;
 }
-
+footer#page-footer {
+    color: whitesmoke;
+    background-color: #000;
+    padding: 40px;
+}
