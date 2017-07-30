@@ -73,8 +73,51 @@ form{
   z-index: 5;
   cursor: pointer;
 }
-footer#page-footer {
-    color: whitesmoke;
-    background-color: #000;
-    padding: 40px;
+#wishes-fluid-container{
+            background-color: #f05f40;
+            
+}
+#moments-fluid-container{
+    background-color: lightgray;
+}
+
+.page-header h2{
+   color: white;
+    
+}
+.page-header h2 small{
+    color:oldlace;
+}
+blockquote p{
+    color: oldlace;
+    font-family:monospace;
+}
+blockquote footer{
+    color:bisque;
+}
+#page-footer{
+     background-color:#000;
+    padding:40px;
+}
+#page-footer a{
+    color:whitesmoke;
+}
+#page-footer{
+    color:whitesmoke;
+}
+#moments h2{
+   color: black;
+    
+}
+#moments h2 small{
+    color:gray;
+}
+.p-justify{
+    text-align: justify;
+}
+hr.small{
+    width:30px;
+}
+.col-sm-2.no-padding{
+    padding-left: 20px;
 }
