@@ -28,6 +28,6 @@
 	
 	
 	    if(!isLoggedIn()){
-	    //redirect();
+	    	redirect();
 		}
 
